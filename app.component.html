@@ -1,0 +1,16 @@
+<!-- The content below is only a placeholder and can be replaced. -->
+<div>
+  <h1>List of Movies!</h1>
+  <ul>
+    <li *ngFor="let movie of movies">
+      <h2 (click)="movieClicked(movie)">{{ movie.title }}</h2>
+    </li>
+  </ul>
+  <hr />
+  Title<input type="text" [(ngModel)]="selectedMovie.title" /><br />
+  Desc<input type="text" [(ngModel)]="selectedMovie.desc" /><br />
+  Year<input type="text" [(ngModel)]="selectedMovie.year" /><br />
+  <button (click)="updateDetails()">PUT</button>
+  <button (click)="createMovie()">POST</button>
+  <button (click)="deleteMovie()">Delete</button>
+</div>
